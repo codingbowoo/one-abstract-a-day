@@ -20,4 +20,5 @@ Petroleum production forecasting
 ### 2019.12.21 [Using LSTMs for climate change assessment studies on droughts and floods](https://arxiv.org/abs/1911.03941)
 
 > large datasets에 대한 학습을 진행하는 a large-scale LSTM-based modeling approach를 제안한다. 홍수와 가뭄을 예측한다. 
-> 약간 수정한(어떤?) input gate구조를 가지는 LSTM 네트워크를 사용한다. train 할 때는 여러 하천으로부터의 기상 정보를 사용했고, 특정 장소에 대한 모델의 조건을 적을 때는 집수의 성격을 고정하여 사용했다. 
+
+> 약간 수정한 input gate구조를 가지는 LSTM(Entity-Aware Long Short-Term Memory Network(EA-LSTM))네트워크를 사용한다. train 할 때는 여러 하천으로부터의 기상 정보를 사용했고, 특정 장소에 대한 모델의 조건을 적을 때는 집수의 성격을 고정하여 사용했다. 
