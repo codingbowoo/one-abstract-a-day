@@ -22,3 +22,10 @@ Petroleum production forecasting
 > large datasets에 대한 학습을 진행하는 a large-scale LSTM-based modeling approach를 제안한다. 홍수와 가뭄을 예측한다. 
 
 > 약간 수정한 input gate구조를 가지는 LSTM(Entity-Aware Long Short-Term Memory Network(EA-LSTM))네트워크를 사용한다. train 할 때는 여러 하천으로부터의 기상 정보를 사용했고, 특정 장소에 대한 모델의 조건을 적을 때는 집수의 성격을 고정하여 사용했다. 
+
+### 2019.12.31 [A LSTM-based method for stock returns prediction: A case study of China stock market](https://ieeexplore.ieee.org/abstract/document/7364089)
+
+> 주식 시장 예측에 관한 연구는 꾸준히 이어져 왔고, 뉴럴넷, 유전 알고리즘, 서포트 벡터 머신 등의 다양한 기계학습 알고리즘이 적용되어 왔다. 
+주가는 (특히 시간) 순서가 있는 데이터에 해당하기 때문에 다양한 RNN 모델을 사용한 연구가 있어 왔다. 이러한 RNN 아키텍처 중 가장 성능이 좋은 것이 LSTM이다. LSTM은 메모리 셀을 통해 예전의 데이터와 지금의 입력값 간의 연결고리를 찾기 용이하다. 
+
+> 이 논문은 중국 주식 시장에 LSTM 아키텍처를 적용함으로써 예측의 성능을 높인다. 10개의 learning feature와 3일의 'earning rate'를 라벨링한다는 것에 대해 집중해서 본문을 읽어야겠다. 
