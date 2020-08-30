@@ -1,0 +1,42 @@
+- **BERT Feature Based Model for Predicting the Helpfulness Scores of Online Customers Reviews**
+    - [ ]  어떻게 BERT를 써서 Helpfulness score를 냈지?
+        - 기존: simple explanatory variables
+            - [ ]  non lineaer model by incorporating linguistic fetures such as writing style and RBS for prediction
+            - [ ]  regression model using lexical subjective clues, lexical similarity features, challow syntactic features
+            - [ ]  explanatory variables in the regression model: word count? ㄴㄴ해
+            - [ ]  nlp적 접근: opinion mining, semantic classification, sentiment classification 가능
+            - [ ]  **Researchers have already shown that BERT can process product reviews data with high accuracy, working alongside reading comprehension and aspect-based sentiment analysis [9].**
+        - [ ]  리뷰를 구성하는 요소들: detailed information about the product, product descriptions, use experiences, personalized suggestions.
+        - Quality feature selection: BERT features based algorithm
+            - [ ]  use the ratio of helpful votes to total votes for each review
+            - [ ]  use BERT to analyze the product review
+            - [ ]  proposed model predicts the helpfulness of customer reviews with...
+                - [ ]  a ranking score by analyzing the review text
+                - [ ]  its star rating
+                - [ ]  the product type
+            - [ ]  **The prediction should help consumers to make a better purchase decision.**
+    - [ ]  세세히 정리해봅시다.
+        - 리뷰의 유용성 점수를 결정하는 요소
+            1. extractive information
+                - **star rating(intuitive numeric data: +/- attitude)**
+                - **product type(search goods: extreme review / experience goods: moderate review가 더 좋음)**
+            2. abstractive information
+                - review details: the information that consumers want to know about the product ( 리뷰가 길다고 장땡은 아님)
+                - high readability >> review length
+                - review depth by word count, dep. on the product type
+                - semantic features: subjective and objective information 둘 다 있어야 함
+                - sentiment features: 부정>긍정: 긍정-도움이 됐어요, 부정-구매결정에 영향
+        - 이전 연구
+            - [ ]  regression model with explanatory variables: extremity(star rating), review depth, product type
+            - [ ]  linear regression model with 11 explanatory var. from 3 categories: Analytic, Clout, Authentic, CogsProc, Percept (review helpfulness), PosEmo, NegEmo (sentiment features), Word Count, WPS, Compare(objectivity), star rating(metadata var)
+        - 실험 상세 & 사용 모델
+            - BERT
+                - [ ]  pre-train language model by using large-scale corpora using on a transformer model(bidirectionally trained through multiple layers)
+                - [ ]  used for feature extraction
+            - 사용 데이터
+                - [ ]  star rating, helpful votes, total votes, reviews body
+                - [ ]  helpfulness score = helpful/ total votes 랑 model 마지막 레이어의 predict result 를 MSE
+                - [ ]  4000review to train the regression model, 500 review to optimize the params, 500 for test
+            - 발전 가능 방향
+                - [ ]  post-process procedure to optimize the weights of BERT features based on the specific products category
+                - [ ]  model BERT features with mo advanced statistical computing techniques
